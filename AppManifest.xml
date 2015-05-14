@@ -7,7 +7,7 @@
      SharePointMinVersion="16.0.0.0"
 >
   <Properties>
-    <Title>SharePoint App TestCaml</Title>
+    <Title>SharePoint App Test Caml</Title>
     <StartPage>~appWebUrl/Pages/Default.aspx?{StandardTokens}</StartPage>
   </Properties>
 
@@ -15,6 +15,6 @@
     <Internal />
   </AppPrincipal>
   <AppPermissionRequests>
-    <AppPermissionRequest Scope="http://sharepoint/content/sitecollection" Right="Read" />
+    <AppPermissionRequest Scope="http://sharepoint/content/sitecollection" Right="Manage" />
   </AppPermissionRequests>
 </App>

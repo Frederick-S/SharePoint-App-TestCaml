@@ -5,3 +5,11 @@
 #caml {
     width: 300px;
 }
+
+#execute-query {
+    vertical-align: bottom;
+}
+
+.spinner {
+    display: none;
+}

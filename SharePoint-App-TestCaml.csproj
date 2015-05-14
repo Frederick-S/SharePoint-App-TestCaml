@@ -46,6 +46,9 @@
     <None Include="Pages\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{84f9ab1e-ab8c-4d6c-9e26-7af64895c170}</SharePointProjectItemId>
     </None>
+    <Content Include="Content\alertify\alertify.core.css" />
+    <Content Include="Content\alertify\alertify.default.css" />
+    <Content Include="Content\spinner.css" />
     <Content Include="Pages\Elements.xml" />
     <Content Include="Pages\Default.aspx" />
   </ItemGroup>
@@ -53,6 +56,7 @@
     <None Include="Scripts\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{d5fce5ee-56b1-46d6-8963-6d4d7910b60e}</SharePointProjectItemId>
     </None>
+    <Content Include="Scripts\alertify\alertify.min.js" />
     <Content Include="Scripts\Elements.xml" />
     <Content Include="Scripts\App.js" />
   </ItemGroup>

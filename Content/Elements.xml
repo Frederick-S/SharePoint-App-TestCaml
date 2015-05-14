@@ -2,5 +2,8 @@
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
   <Module Name="Content">
     <File Path="Content\App.css" Url="Content/App.css" ReplaceContent="TRUE" />
+    <File Path="Content\alertify\alertify.core.css" Url="Content/alertify/alertify.core.css" ReplaceContent="TRUE" />
+    <File Path="Content\alertify\alertify.default.css" Url="Content/alertify/alertify.default.css" ReplaceContent="TRUE" />
+    <File Path="Content\spinner.css" Url="Content/spinner.css" ReplaceContent="TRUE" />
   </Module>
 </Elements>

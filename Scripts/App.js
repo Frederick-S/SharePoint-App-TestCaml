@@ -95,10 +95,58 @@
     }
 
     function renderListItems(data) {
-        alert(data);
+        try {
+            var results = data['d']['results'];
+            var result = {};
+            var dataset = [];
+            var fieldValuesAsText = {};
+            var fields = [];
+
+            for (var i = 0, length = results.length; i < length; i++) {
+                result = results[i];
+                fieldValuesAsText = result.FieldValuesAsText;
+
+                var data = [];
+
+                for (var key in fieldValuesAsText) {
+                    if (fieldValuesAsText.hasOwnProperty(key)) {
+                        if (key != '__metadata') {
+                            data.push(fieldValuesAsText[key] === '' ? 'NA' : fieldValuesAsText[key]);
+
+                            if (i === 0) {
+                                fields.push({
+                                    'title': key
+                                });
+                            }
+                        }
+                    }
+                }
+
+                if (data.length > 0) {
+                    dataset.push(data);
+                }
+            }
+
+            $('.spinner').hide();
+
+            if (dataset.length === 0) {
+                $('#query-result').html('No results.');
+            } else {
+                $('#query-result').html('<table cellpadding="0" cellspacing="0" border="0" class="display" id="list-items"></table>');
+
+                $('#list-items').dataTable({
+                    "data": dataset,
+                    "columns": fields
+                });
+            }
+        } catch (error) {
+            alertify.error(error, 2000);
+        }
     }
 
     function getListItemsByListIdErrorHandler(errorMessage) {
+        $('.spinner').hide();
+
         alertify.error(errorMessage, 2000);
     }
 
@@ -119,6 +167,9 @@
             $('#execute-query').click(function () {
                 var webUrl = $.trim($('#web-url').val());
                 var listId = $('#available-lists').val();
+
+                $('#query-result').html('');
+                $('.spinner').show();
 
                 getListItemsByListId(webUrl, listId).then(renderListItems, getListItemsByListIdErrorHandler);
             });

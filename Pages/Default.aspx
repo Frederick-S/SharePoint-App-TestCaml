@@ -10,6 +10,7 @@
     <link rel="Stylesheet" type="text/css" href="../Content/spinner.css" />
     <link rel="Stylesheet" type="text/css" href="../Content/alertify/alertify.core.css" />
     <link rel="Stylesheet" type="text/css" href="../Content/alertify/alertify.default.css" />
+    <link rel="Stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css" />
 </asp:Content>
 
 <asp:Content ContentPlaceHolderID="PlaceHolderPageTitleInTitleArea" runat="server">
@@ -39,12 +40,12 @@
             </div>
         </div>
     </div>
+    <hr />
     <div class="spinner">
         <div class="dot1"></div>
         <div class="dot2"></div>
     </div>
     <div id="query-result"></div>
-    <hr />
     <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/4.0/1/MicrosoftAjax.js"></script>
     <script type="text/javascript" src="/_layouts/15/init.js"></script>
     <script type="text/javascript" src="/_layouts/15/sp.runtime.js"></script>
@@ -52,6 +53,7 @@
     <script type="text/javascript" src="/_layouts/15/sp.requestexecutor.js"></script>
     <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js"></script>
     <script type="text/javascript" src="../Scripts/alertify/alertify.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="../Scripts/App.js"></script>
     <script type="text/javascript">
         App.run();

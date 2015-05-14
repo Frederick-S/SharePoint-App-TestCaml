@@ -13,6 +13,27 @@
     Test Caml
 </asp:Content>
 <asp:Content ContentPlaceHolderID="PlaceHolderMain" runat="server">
+    <div id="setting">
+        <div class="UserSectionHead">Web Url:</div>
+        <div class="UserSectionBody">
+            <div class="UserControlGroup">
+                <input id="web-url" type="text" />
+                <input id="fetch-lists" type="button" value="Get" />
+            </div>
+        </div>
+        <div class="UserSectionHead">Available Lists:</div>
+        <div class="UserSectionBody">
+            <div class="UserControlGroup">
+                <select id="available-lists"></select>
+            </div>
+        </div>
+        <div class="UserSectionHead">Caml:</div>
+        <div class="UserSectionBody">
+            <div class="UserControlGroup">
+                <textarea id="caml" rows="10" cols="20"></textarea>
+            </div>
+        </div>
+    </div>
     <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/4.0/1/MicrosoftAjax.js"></script>
     <script type="text/javascript" src="/_layouts/15/init.js"></script>
     <script type="text/javascript" src="/_layouts/15/sp.runtime.js"></script>
